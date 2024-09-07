@@ -31,6 +31,7 @@ Please report any bugs or feature requests to the [issue tracker](https://github
   - [ ] Implement all the features of the old SmoothCSV
   - [ ] Localization for Japanese
   - [ ] Windows support
+  - [ ] Dark mode
   - [ ] Build a website
 - [ ] Release stable version
   - [ ] Pay 99 USD to Apple for the Developer Program
