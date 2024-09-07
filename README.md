@@ -4,6 +4,8 @@ SmoothCSV is a powerful CSV file editor.
 
 smoothcsv3 is the next generation of [SmoothCSV](https://github.com/kohii/smoothcsv) with a new UI, new features and new technologies.
 
+![SmoothCSV3](./screenshots/top.png)
+
 ## Status
 
 This project is still a work in progress.
@@ -26,15 +28,16 @@ Please report any bugs or feature requests to the [issue tracker](https://github
 - [x] Release alpha version
 - [ ] Release beta version
   - [ ] Rename and rebrand the app
-	- [ ] Implement all the features of the old SmoothCSV
-	- [ ] Localization for Japanese
-	- [ ] Windows support
-	- [ ] Build a website
+  - [ ] Implement all the features of the old SmoothCSV
+  - [ ] Localization for Japanese
+  - [ ] Windows support
+  - [ ] Build a website
 - [ ] Release stable version
   - [ ] Pay 99 USD to Apple for the Developer Program
-	- [ ] Localization for other languages
-	- [ ] Improve performance
-	- [ ] Improve stability
+  - [ ] Localization for other languages
+  - [ ] Improve performance
+  - [ ] Improve stability
 - [ ] In the future
-	- [ ] Build extension system
-	- [ ] Open source the project
+  - [ ] Build extension system
+  - [ ] Open source the project
+  - [ ] Support other file formats
