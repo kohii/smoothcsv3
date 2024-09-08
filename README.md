@@ -70,6 +70,7 @@ xattr -r -d com.apple.quarantine "/Applications/SmoothCSV 3.app"
   - [ ] Dark mode
 - [ ] Release stable version
   - [ ] Pay 99 USD to Apple for the Developer Program
+  - [ ] Launch on Product Hunt
   - [ ] Localization for other languages
   - [ ] Improve performance
   - [ ] Improve stability
