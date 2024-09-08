@@ -62,11 +62,12 @@ xattr -r -d com.apple.quarantine "/Applications/SmoothCSV 3.app"
 - [ ] Release beta version
   - [ ] Rename and rebrand the app
   - [ ] Implement all the features of the old SmoothCSV
+  - [ ] Build a website
+  - [ ] Updater
+  - [ ] Settings
   - [ ] Localization for Japanese
   - [ ] Windows support
   - [ ] Dark mode
-  - [ ] Build a website
-  - [ ] Settings
 - [ ] Release stable version
   - [ ] Pay 99 USD to Apple for the Developer Program
   - [ ] Localization for other languages
