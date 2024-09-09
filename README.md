@@ -78,3 +78,4 @@ xattr -r -d com.apple.quarantine "/Applications/SmoothCSV 3.app"
   - [ ] Build extension system
   - [ ] Open source the project
   - [ ] Support other file formats
+  - [ ] AI assistance
