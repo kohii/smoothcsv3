@@ -1,25 +1,25 @@
-# smoothcsv3
+# SmoothCSV 3
 
-SmoothCSV 3 is the next generation of [SmoothCSV](https://github.com/kohii/smoothcsv) featuring a new UI, new features, and new technologies.
+SmoothCSV 3 is the next generation of [SmoothCSV](https://github.com/kohii/smoothcsv), featuring a new UI, new functionalities, and updated technologies.
 
-![SmoothCSV3](./screenshots/top.png)
+![](./screenshots/top.png)
 
 ## Status
 
-This project is still a work in progress.
+This project is currently a work in progress.
 
-The source code is currently not public.
-(I have not yet decided whether to make it open-source.)
+The source code is not yet public.
+(I have not decided whether it will be open-source.)
 
 ## Download
 
 An alpha version is available for testing.
-Check the [releases](https://github.com/kohii/smoothcsv3/releases) page.
-Currently, only macOS is supported.
+You can download it from the [releases](https://github.com/kohii/smoothcsv3/releases) page.
+At the moment, only macOS is supported.
 
-Please note that the alpha version may contain bugs and may not be stable. Use it at your own risk.
+Please note that the alpha version may contain bugs and might not be stable. Use it at your own risk.
 
-Please report any bugs or feature requests to the [issue tracker](https://github.com/kohii/smoothcsv3/issues).
+Report any bugs or feature requests via the [issue tracker](https://github.com/kohii/smoothcsv3/issues).
 
 <details>
 <summary>If you cannot open the app because it is damaged</summary>
@@ -39,13 +39,13 @@ xattr -r -d com.apple.quarantine "/Applications/SmoothCSV 3.app"
 <details>
 <summary>If you cannot open the app because the developer cannot be verified</summary>
 
-1. Open `System Settings` app and go to `Security & Privacy`.
-2. Click `Open Anyway` button.
+1. Open the `System Settings` app and go to `Security & Privacy`.
+2. Click the `Open Anyway` button.
 
-If you cannot find the `Open Anyway` button, follow the steps below.
+If the `Open Anyway` button doesn't appear, follow these steps:
 
 1. Open the Terminal app.
-2. Run the following command.
+2. Run the following command:
 
 ```bash
 xattr -r -d com.apple.quarantine "/Applications/SmoothCSV 3.app"
@@ -55,26 +55,27 @@ xattr -r -d com.apple.quarantine "/Applications/SmoothCSV 3.app"
 
 ## Roadmap
 
-- [x] Release alpha version
-- [ ] Release beta version
+- [x] Alpha release
+  - [x] Implement basic functionality (file read/write, editing, undo/redo, copy/paste, find/replace, command palette, etc.)
+- [ ] Beta release
   - [ ] Rename and rebrand the app
-  - [ ] Implement all the features of the old SmoothCSV
+  - [ ] Implement all features from the original SmoothCSV
   - [ ] Build a website
-  - [ ] Updater
-  - [ ] Settings
-  - [ ] Localization for Japanese
-  - [ ] Windows support
-  - [ ] Dark mode
-- [ ] Release stable version
-  - [ ] Pay 99 USD to Apple for the Developer Program
+  - [ ] Add an updater
+  - [ ] Implement settings
+  - [ ] Localize for Japanese
+  - [ ] Add Windows support
+  - [ ] Implement dark mode
+- [ ] Stable release
+  - [ ] Pay $99 for Apple Developer Program
   - [ ] Launch on Product Hunt
-  - [ ] Localization for other languages
+  - [ ] Add localization for other languages
   - [ ] Improve performance
-  - [ ] Improve stability
-- [ ] In the future
-  - [ ] Build extension system
-  - [ ] Open source the project
-  - [ ] Support other file formats
-  - [ ] AI assistance
+  - [ ] Enhance stability
+- [ ] Future plans
+  - [ ] Develop an extension system
+  - [ ] Open-source the project
+  - [ ] Support additional file formats
+  - [ ] Integrate AI assistance
 
-I would like this app to be considered the VSCode of the tabular editor in the future.
+I aspire for this app to eventually be considered the "VSCode of tabular editors."
