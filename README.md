@@ -1,8 +1,6 @@
 # smoothcsv3
 
-SmoothCSV is a powerful CSV file editor.
-
-smoothcsv3 is the next generation of [SmoothCSV](https://github.com/kohii/smoothcsv) with a new UI, new features and new technologies.
+SmoothCSV 3 is the next generation of [SmoothCSV](https://github.com/kohii/smoothcsv) featuring a new UI, new features, and new technologies.
 
 ![SmoothCSV3](./screenshots/top.png)
 
@@ -10,12 +8,12 @@ smoothcsv3 is the next generation of [SmoothCSV](https://github.com/kohii/smooth
 
 This project is still a work in progress.
 
-The source code is not yet open to the public.
-(I haven't decided whether to open the source code or not.)
+The source code is currently not public.
+(I have not yet decided whether to make it open-source.)
 
 ## Download
 
-Alpha version is available for testing.
+An alpha version is available for testing.
 Check the [releases](https://github.com/kohii/smoothcsv3/releases) page.
 Currently, only macOS is supported.
 
@@ -39,7 +37,7 @@ xattr -r -d com.apple.quarantine "/Applications/SmoothCSV 3.app"
 </details>
 
 <details>
-<summary>If you cannot open the app because of the developer cannot be verified</summary>
+<summary>If you cannot open the app because the developer cannot be verified</summary>
 
 1. Open `System Settings` app and go to `Security & Privacy`.
 2. Click `Open Anyway` button.
@@ -54,7 +52,6 @@ xattr -r -d com.apple.quarantine "/Applications/SmoothCSV 3.app"
 ```
 
 </details>
-
 
 ## Roadmap
 
@@ -79,3 +76,5 @@ xattr -r -d com.apple.quarantine "/Applications/SmoothCSV 3.app"
   - [ ] Open source the project
   - [ ] Support other file formats
   - [ ] AI assistance
+
+I would like this app to be considered the VSCode of the tabular editor in the future.
