@@ -79,3 +79,9 @@ xattr -r -d com.apple.quarantine "/Applications/SmoothCSV 3.app"
   - [ ] Integrate AI assistance
 
 I aspire for this app to eventually be considered the "VSCode of tabular editors."
+
+## Support ❤️
+
+If you like this project and would like to support me, you can help by:
+
+[!["Buy Me A Coffee"](https://www.buymeacoffee.com/assets/img/custom_images/orange_img.png)](https://www.buymeacoffee.com/kohii)
