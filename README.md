@@ -15,7 +15,7 @@ The source code is not yet public.
 
 An alpha version is available for testing.
 You can download it from the [releases](https://github.com/kohii/smoothcsv3/releases) page.
-At the moment, only macOS is supported.
+Currently, only macOS is supported.
 
 Please note that the alpha version may contain bugs and might not be stable. Use it at your own risk.
 
@@ -85,3 +85,10 @@ I aspire for this app to eventually be considered the "VSCode of tabular editors
 If you like this project and would like to support me, you can help by:
 
 [!["Buy Me A Coffee"](https://www.buymeacoffee.com/assets/img/custom_images/orange_img.png)](https://www.buymeacoffee.com/kohii)
+
+Also, please:
+
+- Star the repository
+- Follow me on X for updates
+  - en: https://x.com/kohiidev
+  - ja: https://x.com/kohii00
