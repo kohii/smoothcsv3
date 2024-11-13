@@ -13,66 +13,34 @@ The source code is not yet public.
 
 ## Download
 
-An alpha version is available for testing.
+A beta version is available for testing.
 You can download it from the [releases](https://github.com/kohii/smoothcsv3/releases) page.
-Currently, only macOS is supported.
 
-Please note that the alpha version may contain bugs and might not be stable. Use it at your own risk.
+Please note that the beta version may contain bugs and might not be stable. Use it at your own risk.
 
 Report any bugs or feature requests via the [issue tracker](https://github.com/kohii/smoothcsv3/issues).
-
-<details>
-<summary>If you cannot open the app because it is damaged</summary>
-
-<p align="center">
-  <img src="./screenshots/damaged.png" width="320px" />
-</p>
-
-1. Open the Terminal app.
-2. Run the following command.
-
-```bash
-xattr -r -d com.apple.quarantine "/Applications/SmoothCSV 3.app"
-```
-</details>
-
-<details>
-<summary>If you cannot open the app because the developer cannot be verified</summary>
-
-1. Open the `System Settings` app and go to `Security & Privacy`.
-2. Click the `Open Anyway` button.
-
-If the `Open Anyway` button doesn't appear, follow these steps:
-
-1. Open the Terminal app.
-2. Run the following command:
-
-```bash
-xattr -r -d com.apple.quarantine "/Applications/SmoothCSV 3.app"
-```
-
-</details>
 
 ## Roadmap
 
 - [x] Alpha release
   - [x] Implement basic functionality (file read/write, editing, undo/redo, copy/paste, find/replace, command palette, etc.)
-- [ ] Beta release
+- [x] Beta release
   - [x] Add Windows support
-  - [ ] Implement all features from the original SmoothCSV
-  - [ ] Rebrand the app
-  - [ ] Build a website
-  - [ ] Add an updater
-  - [ ] Add a toolbar
-  - [ ] Pay $99 for Apple Developer Program
+  - [x] Rebrand the app
+  - [x] Add an updater
+  - [x] Pay $99 for Apple Developer Program
+  - [x] Localize for Japanese, Spanish, Chinese-Simplified
 - [ ] Stable release
+  - [ ] Implement all features from the original SmoothCSV
+  - [ ] Add a toolbar
+  - [ ] Build a website
   - [ ] Implement settings
   - [ ] Implement dark mode
   - [ ] Launch on Product Hunt
   - [ ] Improve performance
   - [ ] Enhance stability
-  - [ ] Localize for Japanese
   - [ ] Add localization for other languages
+  - [ ] Add Linux support
 - [ ] Future plans
   - [ ] Develop an extension system
   - [ ] Open-source the project
