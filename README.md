@@ -33,7 +33,7 @@ Report any bugs or feature requests via the [issue tracker](https://github.com/k
 - [ ] Stable release
   - [ ] Implement all features from the original SmoothCSV
   - [ ] Add a toolbar
-  - [ ] Build a website
+  - [x] Build a website
   - [ ] Implement settings
   - [ ] Implement dark mode
   - [ ] Launch on Product Hunt
