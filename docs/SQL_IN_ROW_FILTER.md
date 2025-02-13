@@ -37,9 +37,6 @@ Supported types:
 - `boolean`
 - `bigint`
 - `null`
-
-The following types will be supported in the future:
-
 - `date`
 - `time`
 - `timestamp`
@@ -48,11 +45,13 @@ The following types will be supported in the future:
 Notes:
 
 - All cell values are initially treated as `string`
-- Type coercion follows JavaScript-like rules:
+- Type coercion follows JavaScript-like rules for primitive types:
   - `1 = true` → `true`
   - `'1' = 1` → `true`
   - `'' = 0` → `true`
   - `1 + true` → `2`
+- No implicit type coercion is performed for `date`, `time`, `timestamp`, and `interval` types
+  - Use `CAST` or `TRY_CAST` to convert strings to these types
 
 Use `CAST` or `TRY_CAST` for explicit type conversion:
 
@@ -61,7 +60,33 @@ CAST('123' AS bigint) -- returns 123
 CAST('12.3' AS double precision) -- returns 12.3
 CAST('abc' AS bigint) -- error
 TRY_CAST('abc' AS bigint) -- returns null
+CAST('2024-03-14' AS date) -- returns date
+CAST('15:30:00' AS time) -- returns time
+CAST('2024-03-14 15:30:00' AS timestamp) -- returns timestamp
 ```
+
+### Date/Time/Interval Literal Syntax
+
+#### Date
+
+- ISO format: `DATE 'YYYY-MM-DD'`
+- Example: `DATE '2024-03-14'`
+
+#### Time
+
+- 24-hour format: `TIME 'HH:MM:SS[.fraction]'`
+- Example: `TIME '15:30:00'`, `TIME '15:30:00.123'`
+
+#### Timestamp
+
+- Combined date and time: `TIMESTAMP 'YYYY-MM-DD HH:MM:SS[.fraction]'`
+- Example: `TIMESTAMP '2024-03-14 15:30:00'`
+
+#### Interval
+
+- Format: `INTERVAL 'quantity' leading_field [to last_field]`
+- Supported units: `year`, `month`, `day`, `hour`, `minute`, `second`
+- Example: `INTERVAL '1-2' year to month`, `INTERVAL '1 2:30' day to minute`
 
 ### Numeric Literal Inference
 
