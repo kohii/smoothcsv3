@@ -6,7 +6,7 @@ SmoothCSV allows you to filter rows using SQL WHERE clause syntax, providing a p
 
 To access the filter query input:
 
-- Use keyboard shortcut: `Ctrl+Alt+F` (macOS: `Cmd+Alt+F`)
+- Use keyboard shortcut: `Ctrl+Shift+F` (macOS: `Cmd+Shift+F`)
 - Open Command Palette and search for "filter"
 - Select `Grid` > `Filter` from the menubar
 
