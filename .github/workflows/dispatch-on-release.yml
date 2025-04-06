@@ -1,0 +1,17 @@
+name: Dispatch Workflow on Release
+
+on:
+  release:
+    types: [published]
+
+jobs:
+  dispatch:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Dispatch workflow in smoothcsv-website
+        uses: peter-evans/repository-dispatch@v3
+        with:
+          token: ${{ secrets.SMOOTHCSV_WEBSITE_DISPATCH_TOKEN }}
+          repository: kohii/smoothcsv-website
+          event-type: release-published
+          client-payload: '{ "release_tag": "${{ github.event.release.tag_name }}", "release_url": "${{ github.event.release.html_url }}" }'
