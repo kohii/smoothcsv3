@@ -6,10 +6,11 @@ Note: This feature is experimental and the syntax is subject to change.
 
 ## Accessing the SQL Console
 
-There are two ways to open the SQL Console:
+There are three ways to open the SQL Console:
 
-1. Via Command Palette: Search for "SQL console"
-2. Via Menu Bar: Navigate to `File` > `New SQL Console`
+- Via Command Palette: Search for "SQL console"
+- Via Menu Bar: Navigate to `File` > `New SQL Console`
+- Via `Open in SQL Console` in the filter widget
 
 ## Writing SQL Queries
 
