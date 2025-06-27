@@ -1,6 +1,16 @@
 # SmoothCSV 3
 
-SmoothCSV 3 is the next generation of [SmoothCSV](https://github.com/kohii/smoothcsv), featuring a new UI, new functionalities, and updated technologies.
+> [!NOTE]
+> ### 🚀 Product Hunt Launch - July 1st, 2025!
+> SmoothCSV launches on Product Hunt **July 1st, 2025 at 12:01 AM PDT**!  
+> 👉 **[Follow on Product Hunt](https://www.producthunt.com/products/smoothcsv)** to get notified!  
+> Your support would be greatly appreciated! 🙏
+
+---
+
+SmoothCSV 3 is the next generation of [SmoothCSV](https://github.com/kohii/smoothcsv2), featuring a new UI, new functionalities, and updated technologies.
+
+[smoothcsv.com](https://smoothcsv.com)
 
 ![](./screenshots/top.png)
 
