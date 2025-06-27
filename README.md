@@ -37,9 +37,8 @@ Report any bugs or feature requests via the [issue tracker](https://github.com/k
   - [x] Implement settings
   - [ ] Implement dark mode
   - [ ] Launch on Product Hunt
-  - [ ] Improve performance
+  - [x] Improve performance
   - [ ] Enhance stability
-  - [ ] Add localization for other languages
   - [ ] Add Linux support
 - [ ] Future plans
   - [ ] Develop an extension system
