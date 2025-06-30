@@ -1,72 +1,68 @@
-# SmoothCSV 3
-
 > [!NOTE]
-> ### 🚀 Product Hunt Launch - July 1st, 2025!
+> ## 🚀 Product Hunt Launch - July 1st, 2025!
 > SmoothCSV launches on Product Hunt **July 1st, 2025 at 12:01 AM PDT**!  
-> 👉 **[Follow on Product Hunt](https://www.producthunt.com/products/smoothcsv)** to get notified!  
-> Your support would be greatly appreciated! 🙏
+> Any kind of support would be greatly appreciated 🙏
+> 
+> <a href="https://www.producthunt.com/products/smoothcsv?embed=true&utm_source=badge-featured&utm_medium=badge&utm_source=badge-smoothcsv" target="_blank"><img src="https://api.producthunt.com/widgets/embed-image/v1/featured.svg?post_id=983069&theme=light&t=1751283527685" alt="SmoothCSV - The&#0032;ultimate&#0032;CSV&#0032;editor&#0032;you&#0039;ve&#0032;been&#0032;waiting&#0032;for | Product Hunt" style="width: 250px; height: 54px;" width="250" height="54" /></a>
 
 ---
 
-SmoothCSV 3 is the next generation of [SmoothCSV](https://github.com/kohii/smoothcsv2), featuring a new UI, new functionalities, and updated technologies.
+# SmoothCSV 3
 
-[smoothcsv.com](https://smoothcsv.com)
+SmoothCSV 3 is the ultimate CSV editor for macOS and Windows.
 
-![](./screenshots/top.png)
+**Website:** [smoothcsv.com](https://smoothcsv.com)
 
-## Status
+![SmoothCSV Screenshot](./screenshots/hero.png)
 
-This project is currently a work in progress.
+## About This Repository
 
-The source code is not yet public.
-(I have not decided whether it will be open-source.)
+The source code is not yet public (I haven't decided whether it will be open-source or not).
+
+This repository is used for issue tracking and release management.
 
 ## Download
 
-A beta version is available for testing.
-You can download it from the [releases](https://github.com/kohii/smoothcsv3/releases) page.
+Download the latest version from the [releases](https://github.com/kohii/smoothcsv3/releases) page.
 
-Please note that the beta version may contain bugs and might not be stable. Use it at your own risk.
-
-Report any bugs or feature requests via the [issue tracker](https://github.com/kohii/smoothcsv3/issues).
+Report bugs or request features via the [issue tracker](https://github.com/kohii/smoothcsv3/issues).
 
 ## Roadmap
 
-- [x] Alpha release
+- [x] **Alpha Release**
   - [x] Implement basic functionality (file read/write, editing, undo/redo, copy/paste, find/replace, command palette, etc.)
-- [x] Beta release
+- [x] **Beta Release**
   - [x] Add Windows support
   - [x] Rebrand the app
   - [x] Add an updater
   - [x] Pay $99 for Apple Developer Program
   - [x] Localize for Japanese, Spanish, Chinese-Simplified
-- [ ] Stable release
-  - [ ] Implement all features from the original SmoothCSV
-  - [ ] Add a toolbar
+- [x] **Stable Release**
+  - [x] Implement all features from the original SmoothCSV
+  - [x] Add a toolbar
   - [x] Build a website
   - [x] Implement settings
-  - [ ] Implement dark mode
-  - [ ] Launch on Product Hunt
+  - [x] Launch on Product Hunt
   - [x] Improve performance
-  - [ ] Enhance stability
+- [ ] **Coming Soon**
+  - [ ] Implement dark mode
   - [ ] Add Linux support
-- [ ] Future plans
+- [ ] **Future Plans**
   - [ ] Develop an extension system
   - [ ] Open-source the project
   - [ ] Support additional file formats
   - [ ] Integrate AI assistance
 
-I aspire for this app to eventually be considered the "VSCode of tabular editors."
+*My aspiration is for this app to eventually be considered the "VS Code of tabular editors."*
 
 ## Support ❤️
 
-If you like this project and would like to support me, you can help by:
+If you like this project and would like to support me:
 
-[!["Buy Me A Coffee"](https://www.buymeacoffee.com/assets/img/custom_images/orange_img.png)](https://www.buymeacoffee.com/kohii)
+[![Buy Me A Coffee](https://www.buymeacoffee.com/assets/img/custom_images/orange_img.png)](https://www.buymeacoffee.com/kohii)
 
-Also, please:
-
-- Star the repository
-- Follow me on X for updates
-  - en: https://x.com/kohiidev
-  - ja: https://x.com/kohii00
+**Also, please:**
+- ⭐ Star this repository
+- 🐦 Follow me on X for updates:
+  - English: [@kohiidev](https://x.com/kohiidev)
+  - Japanese: [@kohii00](https://x.com/kohii00)
