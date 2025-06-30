@@ -13,7 +13,7 @@ SmoothCSV 3 is the ultimate CSV editor for macOS and Windows.
 
 **Website:** [smoothcsv.com](https://smoothcsv.com)
 
-![SmoothCSV Screenshot](./screenshots/top.png)
+![SmoothCSV Screenshot](./screenshots/hero.png)
 
 ## About This Repository
 
