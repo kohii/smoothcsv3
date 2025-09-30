@@ -1,4 +1,4 @@
-# Opening SmoothCSV with URLs
+# Opening files with URLs
 
 ## Syntax
 ```
