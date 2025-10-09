@@ -128,50 +128,6 @@ smoothcsv --reuse-window data.csv
 smoothcsv -r data.csv
 ```
 
-### ~~Window Position and Size~~ -> Support this later
-
-```bash
-# Set window position and size
-smoothcsv data.csv --position 100,100 --size 1200,800
-smoothcsv data.csv -p 100,100 -s 1200,800
-
-# Maximize window
-smoothcsv data.csv --maximized
-smoothcsv data.csv -m
-
-# Full screen
-smoothcsv data.csv --fullscreen
-smoothcsv data.csv -f
-```
-
-## Advanced Operations
-
-### ~~Filter~~ -> Support this later
-```bash
-# Open with filter applied
-smoothcsv data.csv --filter "column3 > 100"
-smoothcsv data.csv -F "status = 'active'"
-```
-
-## ~~Profile and Settings~~ -> Support this later
-
-### Using Profiles
-```bash
-# Use specific profile for parsing
-smoothcsv data.csv --profile european  # Uses semicolon delimiter, etc.
-smoothcsv data.csv --profile tsv       # Tab-separated values profile
-
-# List available profiles
-smoothcsv --list-profiles
-```
-
-### ~~Temporary Settings~~ -> Support this later
-```bash
-# Read-only mode
-smoothcsv data.csv --read-only
-smoothcsv data.csv -R
-```
-
 ## Integration Features
 
 ### Wait for Close
