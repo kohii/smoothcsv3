@@ -159,7 +159,7 @@ smoothcsv -h
 
 ```bash
 # Edit with specific Japanese encoding
-smoothcsv japanese_data.csv -e Shift-JIS
+smoothcsv japanese_data.csv -e shiftjis
 
 # Open multiple files with same format
 smoothcsv *.csv --new-window
