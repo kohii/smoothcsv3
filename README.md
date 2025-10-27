@@ -57,7 +57,7 @@ Report bugs or request features via the [issue tracker](https://github.com/kohii
   - [x] Launch on Product Hunt
   - [x] Improve performance
 - [ ] **Coming Soon**
-  - [ ] Implement dark mode
+  - [x] Implement dark mode
   - [ ] Add Linux support
 - [ ] **Future Plans**
   - [ ] SmoothCSV in Browser
