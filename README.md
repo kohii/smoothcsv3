@@ -29,6 +29,29 @@ Just smooth CSV editing that works.
 
 *My aspiration is for this app to eventually be considered the "VS Code of tabular editors."*
 
+## Features
+
+- **Power Grid Editor**: Intuitive and performant editing with spreadsheet-like UI.
+- **Row/Column Tools**: Insert, delete, move, hide, dedupe.
+- **Find & Replace**: Search and replace with regex support.
+- **Filtering**: SQL-style filters or a visual condition builder.
+- **Sorting**: Single or multi-column sorting by text, number, date, length.
+- **Multi-Cell Edit**: Edit multiple cells simultaneously, similar to multi-cursor editing.
+- **SQL Console**: Run SELECT queries on CSV files.
+- **Header Tools**: Detect or set custom headers for structure.
+- **Text Transforms**: Instant casing and naming conversions.
+- **Join & Split**: Merge or split cells horizontally/vertically
+- **Copy/Paste As**: Export selections as Markdown, HTML, JSON, SQL, LaTeX, etc.
+- **Excel Import/Export**: Open and save `.xlsx` files.
+- **Customizable File Formats**: Per-file delimiter, quotes, encoding, line endings.
+- **Themes**: Light or dark with system auto-detect.
+- **Localization**: English, Japanese, Spanish, Italian, Simplified Chinese.
+- **CLI**: Launch files and jump to any row/column.
+- **Deep Link**: Open files with `smoothcsv://` URLs.
+- **Auto-fill**: Drag-fill cells with intelligent pattern detection.
+- **Cell Value Panel**: Docked editor akin to Excel’s formula bar.
+- **Command Palette**: Quick access to all features.
+
 ## About This Repository
 
 The source code is not yet public (I haven't decided whether it will be open-source or not).  
