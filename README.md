@@ -99,5 +99,5 @@ If you like this project and would like to support me:
 **Also, please:**
 - ⭐ Star this repository
 - 🐦 Follow me on X for updates:
-  - English: [@kohiidev](https://x.com/kohiidev)
-  - Japanese: [@kohii00](https://x.com/kohii00)
+  - Official updates: [@smoothcsv](https://x.com/smoothcsv)
+  - Author (Japanese): [@kohii00](https://x.com/kohii00)
