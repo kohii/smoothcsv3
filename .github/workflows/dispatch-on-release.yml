@@ -3,6 +3,11 @@ name: Dispatch Workflow on Release
 on:
   release:
     types: [published]
+  workflow_dispatch:
+    inputs:
+      tag:
+        description: "Tag name to dispatch with"
+        required: true
 
 jobs:
   dispatch:
@@ -11,9 +16,31 @@ jobs:
       contents: read
     steps:
       - name: Dispatch workflow in smoothcsv-website
-        uses: peter-evans/repository-dispatch@v3
-        with:
-          token: ${{ secrets.SMOOTHCSV_WEBSITE_DISPATCH_TOKEN }}
-          repository: kohii/smoothcsv-website
-          event-type: release-published
-          client-payload: '{ "release_tag": "${{ github.event.release.tag_name }}", "release_url": "${{ github.event.release.html_url }}" }'
+        env:
+          TARGET_REPO: smoothcsv/smoothcsv-website
+          TAG: ${{ github.event_name == 'workflow_dispatch' && github.event.inputs.tag || github.event.release.tag_name }}
+          PAT: ${{ secrets.SMOOTHCSV_WEBSITE_DISPATCH_TOKEN }}
+        run: |
+          if [ -z "$TAG" ]; then
+            echo "No tag provided"; exit 1
+          fi
+          curl -sS -X POST \
+            -H "Accept: application/vnd.github+json" \
+            -H "Authorization: Bearer $PAT" \
+            https://api.github.com/repos/$TARGET_REPO/dispatches \
+            -d "{\"event_type\":\"smoothcsv3-release\",\"client_payload\":{\"tag\":\"$TAG\"}}"
+
+      - name: Dispatch workflow in smoothcsv private repository
+        env:
+          TARGET_REPO: smoothcsv/smoothcsv
+          TAG: ${{ github.event_name == 'workflow_dispatch' && github.event.inputs.tag || github.event.release.tag_name }}
+          PAT: ${{ secrets.SMOOTHCSV_REPO_PAT }}
+        run: |
+          if [ -z "$TAG" ]; then
+            echo "No tag provided"; exit 1
+          fi
+          curl -sS -X POST \
+            -H "Accept: application/vnd.github+json" \
+            -H "Authorization: Bearer $PAT" \
+            https://api.github.com/repos/$TARGET_REPO/dispatches \
+            -d "{\"event_type\":\"smoothcsv3-release\",\"client_payload\":{\"tag\":\"$TAG\"}}"
