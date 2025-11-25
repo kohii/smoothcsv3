@@ -11,6 +11,7 @@ REPO_ROOT="$(git rev-parse --show-toplevel)"
 VERSION="${1:-}"
 PKGREL_INPUT="${2:-${PKGREL:-1}}"
 OUTPUT_DIR="${3:-${REPO_ROOT}/packaging/aur/out}"
+LICENSE_URL="https://raw.githubusercontent.com/kohii/smoothcsv-website/refs/heads/main/src/pages/terms.md"
 
 if [[ -z "$VERSION" ]]; then
   echo "version is required (e.g., ./generate-aur.sh 3.9.3)" >&2
@@ -72,8 +73,18 @@ download_and_hash() {
   sha256sum "${OUTPUT_DIR}/${filename}" | awk '{print $1}'
 }
 
+download_license_hash() {
+  local tmpfile
+  tmpfile=$(mktemp)
+  trap 'rm -f "$tmpfile"' RETURN
+  echo "Downloading ${LICENSE_URL}" >&2
+  curl -L --fail -o "$tmpfile" "$LICENSE_URL"
+  sha256sum "$tmpfile" | awk '{print $1}'
+}
+
 echo "Generating PKGBUILD for version=${VERSION}, pkgrel=${PKGREL}, pkgname=${PKGNAME}"
 
+SHA256_LICENSE=$(download_license_hash)
 SHA256_X86_64=$(download_and_hash "amd64")
 SHA256_AARCH64=$(download_and_hash "arm64")
 
@@ -84,6 +95,7 @@ sed \
   -e "s/@PKGVER@/${VERSION}/g" \
   -e "s/@PKGREL@/${PKGREL}/g" \
   -e "s/@MAINTAINER_LINE@/${MAINTAINER_LINE_ESCAPED}/g" \
+  -e "s/@SHA256_LICENSE@/${SHA256_LICENSE}/g" \
   -e "s/@SHA256_X86_64@/${SHA256_X86_64}/g" \
   -e "s/@SHA256_AARCH64@/${SHA256_AARCH64}/g" \
   "$TEMPLATE" > "$PKGBUILD_PATH"

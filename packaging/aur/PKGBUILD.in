@@ -12,7 +12,7 @@ conflicts=('smoothcsv')
 source=("LICENSE-SmoothCSV.md::https://raw.githubusercontent.com/kohii/smoothcsv-website/refs/heads/main/src/pages/terms.md")
 source_x86_64=("SmoothCSV_${pkgver}_amd64.deb::https://github.com/kohii/smoothcsv3/releases/download/v${pkgver}/SmoothCSV_${pkgver}_amd64.deb")
 source_aarch64=("SmoothCSV_${pkgver}_arm64.deb::https://github.com/kohii/smoothcsv3/releases/download/v${pkgver}/SmoothCSV_${pkgver}_arm64.deb")
-sha256sums=('SKIP')
+sha256sums=('@SHA256_LICENSE@')
 sha256sums_x86_64=('@SHA256_X86_64@')
 sha256sums_aarch64=('@SHA256_AARCH64@')
 
