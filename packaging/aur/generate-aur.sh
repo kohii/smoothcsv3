@@ -2,15 +2,20 @@
 set -euo pipefail
 
 # Generates a PKGBUILD and .SRCINFO for SmoothCSV AUR binary package.
-# Usage: ./packaging/aur/generate-aur.sh [version] [pkgrel] [output_dir]
-# - version: defaults to apps/desktop/package.json version (without leading v)
+# Usage: ./packaging/aur/generate-aur.sh <version> [pkgrel] [output_dir]
+# - version: required (without leading v)
 # - pkgrel: defaults to 1 (or $PKGREL if exported)
 # - output_dir: defaults to packaging/aur/out
 
 REPO_ROOT="$(git rev-parse --show-toplevel)"
-VERSION="${1:-$(node -e "console.log(require('${REPO_ROOT}/apps/desktop/package.json').version)")}" 
+VERSION="${1:-}"
 PKGREL_INPUT="${2:-${PKGREL:-1}}"
 OUTPUT_DIR="${3:-${REPO_ROOT}/packaging/aur/out}"
+
+if [[ -z "$VERSION" ]]; then
+  echo "version is required (e.g., ./generate-aur.sh 3.9.3)" >&2
+  exit 1
+fi
 PKGNAME="${AUR_PKGNAME:-smoothcsv-bin}"
 MAINTAINER_NAME="${AUR_MAINTAINER_NAME:-${AUR_USERNAME:-kohii}}"
 MAINTAINER_EMAIL="${AUR_MAINTAINER_EMAIL:-${AUR_EMAIL:-kohii.tokyo@gmail.com}}"

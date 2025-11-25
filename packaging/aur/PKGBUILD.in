@@ -2,7 +2,7 @@
 pkgname=@PKGNAME@
 pkgver=@PKGVER@
 pkgrel=@PKGREL@
-pkgdesc="A powerful and intuitive tool for editing CSV files"
+pkgdesc="A powerful and intuitive CSV editor built for real work"
 arch=('x86_64' 'aarch64')
 url="https://smoothcsv.com"
 license=('LicenseRef-SmoothCSV')
