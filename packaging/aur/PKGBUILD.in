@@ -1,0 +1,92 @@
+# Maintainer: @MAINTAINER_LINE@
+pkgname=@PKGNAME@
+pkgver=@PKGVER@
+pkgrel=@PKGREL@
+pkgdesc="A powerful and intuitive tool for editing CSV files"
+arch=('x86_64' 'aarch64')
+url="https://smoothcsv.com"
+license=('LicenseRef-SmoothCSV')
+depends=('gtk3' 'webkit2gtk-4.1' 'libayatana-appindicator' 'hicolor-icon-theme' 'xdg-utils' 'libsoup3')
+provides=('smoothcsv')
+conflicts=('smoothcsv')
+source=("LICENSE-SmoothCSV.md::https://raw.githubusercontent.com/kohii/smoothcsv-website/refs/heads/main/src/pages/terms.md")
+sha256sums=('SKIP')
+if [[ $CARCH == aarch64 ]]; then
+  source+=("SmoothCSV_${pkgver}_arm64.deb::https://github.com/kohii/smoothcsv3/releases/download/v${pkgver}/SmoothCSV_${pkgver}_arm64.deb")
+  sha256sums+=('@SHA256_AARCH64@')
+else
+  source+=("SmoothCSV_${pkgver}_amd64.deb::https://github.com/kohii/smoothcsv3/releases/download/v${pkgver}/SmoothCSV_${pkgver}_amd64.deb")
+  sha256sums+=('@SHA256_X86_64@')
+fi
+
+prepare() {
+  # Strip the front matter (--- ... ---) from the terms markdown.
+  awk '
+    BEGIN { skip = 0; front = 1 }
+    front && /^---[[:space:]]*$/ { skip = 1; next }
+    front && skip && /^---[[:space:]]*$/ { skip = 0; front = 0; next }
+    skip { next }
+    { print }
+  ' "${srcdir}/LICENSE-SmoothCSV.md" > "${srcdir}/LICENSE-SmoothCSV.cleaned.md"
+}
+
+package() {
+  local deb_arch
+
+  if [[ " ${arch[*]} " != *" ${CARCH} "* ]]; then
+    echo "Unsupported arch: $CARCH" >&2
+    return 1
+  fi
+
+  if [[ $CARCH == aarch64 ]]; then
+    deb_arch="arm64"
+  else
+    deb_arch="amd64"
+  fi
+
+  local deb="SmoothCSV_${pkgver}_${deb_arch}.deb"
+
+  # Extract data.tar.* stream from the .deb and unpack it into $pkgdir
+  bsdtar -Oxf "$deb" data.tar.* | bsdtar -x -C "$pkgdir" -f -
+
+  # Ensure the CLI launcher is exposed under /usr/bin/smoothcsv just like the
+  # Debian/RPM packages (AUR does not run maintainer scripts).
+  local cli_source=""
+  if [ -f "$pkgdir/usr/bin/smoothcsv-cli" ]; then
+    cli_source="/usr/bin/smoothcsv-cli"
+    chmod 755 "$pkgdir$cli_source"
+  elif [ -f "$pkgdir/usr/lib/com.smoothcsv.desktop/resources/smoothcsv-cli" ]; then
+    # Fallback for potential layout change; keep in sync with postinst.sh
+    cli_source="/usr/lib/com.smoothcsv.desktop/resources/smoothcsv-cli"
+    chmod 755 "$pkgdir$cli_source"
+  else
+    echo "Error: smoothcsv-cli not found in expected locations." >&2
+    return 1
+  fi
+
+  install -d "$pkgdir/usr/bin"
+  if [ ! -e "$pkgdir/usr/bin/smoothcsv" ]; then
+    ln -s "$cli_source" "$pkgdir/usr/bin/smoothcsv"
+  fi
+
+  # Inject distribution channel so the app can adjust behavior (e.g. auto-update)
+  for bin in smoothcsv smoothcsv-app; do
+    if [ -e "$pkgdir/usr/bin/$bin" ]; then
+      mv "$pkgdir/usr/bin/$bin" "$pkgdir/usr/bin/$bin.bin"
+      cat > "$pkgdir/usr/bin/$bin" <<'EOF'
+#!/usr/bin/env bash
+export SMOOTHCSV_DIST_CHANNEL="AUR"
+exec /usr/bin/SMOOTHCSV_BIN "$@"
+EOF
+      sed -i "s|SMOOTHCSV_BIN|$bin.bin|" "$pkgdir/usr/bin/$bin"
+      chmod 755 "$pkgdir/usr/bin/$bin"
+    fi
+  done
+
+  for desktop_file in "$pkgdir"/usr/share/applications/*.desktop; do
+    [ -f "$desktop_file" ] || continue
+    sed -i 's|^Exec=|Exec=env SMOOTHCSV_DIST_CHANNEL=AUR |' "$desktop_file"
+  done
+
+  install -Dm644 "${srcdir}/LICENSE-SmoothCSV.cleaned.md" "${pkgdir}/usr/share/licenses/${pkgname}/LICENSE-SmoothCSV.md"
+}
