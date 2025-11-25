@@ -8,6 +8,10 @@ on:
       tag:
         description: "Tag name (e.g. v3.9.3). Defaults to latest release tag when empty."
         required: false
+      pkgrel:
+        description: "Arch pkgrel (integer). Defaults to 1."
+        required: false
+        default: "1"
 
 permissions:
   contents: write
@@ -59,7 +63,10 @@ jobs:
           chmod +x packaging/aur/generate-aur.sh
           sudo -u builduser env \
             "AUR_USERNAME=${AUR_USERNAME}" "AUR_EMAIL=${AUR_EMAIL}" \
-            bash packaging/aur/generate-aur.sh "${{ steps.version.outputs.value }}" "${PWD}/packaging/aur/out"
+            bash packaging/aur/generate-aur.sh \
+              "${{ steps.version.outputs.value }}" \
+              "${{ github.event.inputs.pkgrel || 1 }}" \
+              "${PWD}/packaging/aur/out"
 
       - name: Upload artifacts
         uses: actions/upload-artifact@v4
