@@ -1,0 +1,89 @@
+name: Release AUR
+
+on:
+  release:
+    types: [published]
+  workflow_dispatch:
+    inputs:
+      tag:
+        description: "Tag name (e.g. v3.9.3). Defaults to latest release tag when empty."
+        required: false
+      pkgrel:
+        description: "Arch pkgrel (integer). Defaults to 1."
+        required: false
+        default: "1"
+
+permissions:
+  contents: write
+  pull-requests: write
+
+jobs:
+  aur:
+    runs-on: ubuntu-24.04
+    container: archlinux:latest
+    timeout-minutes: 25
+    env:
+      AUR_PKGNAME: smoothcsv-bin
+    steps:
+      - name: Install git
+        run: pacman -Sy --noconfirm git
+
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          ref: ${{ github.event.release.tag_name || github.event.inputs.tag }}
+
+      - name: Install build tools
+        run: |
+          pacman -Sy --noconfirm --needed base-devel git curl nodejs npm sudo
+
+      - name: Create build user
+        run: |
+          useradd -m builduser
+          chown -R builduser:builduser "$PWD"
+
+      - name: Resolve version
+        id: version
+        run: |
+          TAG="${{ github.event.inputs.tag || github.event.release.tag_name }}"
+          if [[ -z "$TAG" ]]; then
+            echo "No tag provided." >&2
+            exit 1
+          fi
+          TAG="${TAG#v}"
+          echo "value=$TAG" >> "$GITHUB_OUTPUT"
+          echo "Resolved tag: $TAG"
+
+      - name: Generate PKGBUILD
+        env:
+          AUR_USERNAME: ${{ secrets.AUR_USERNAME }}
+          AUR_EMAIL: ${{ secrets.AUR_EMAIL }}
+        run: |
+          chmod +x packaging/aur/generate-aur.sh
+          sudo -u builduser env \
+            "AUR_USERNAME=${AUR_USERNAME}" "AUR_EMAIL=${AUR_EMAIL}" \
+            bash packaging/aur/generate-aur.sh \
+              "${{ steps.version.outputs.value }}" \
+              "${{ github.event.inputs.pkgrel || 1 }}" \
+              "${PWD}/packaging/aur/out"
+
+      - name: Upload artifacts
+        uses: actions/upload-artifact@v4
+        with:
+          name: aur-package-${{ steps.version.outputs.value }}
+          path: |
+            packaging/aur/out/PKGBUILD
+            packaging/aur/out/.SRCINFO
+            packaging/aur/out/LICENSE
+
+      - name: Deploy to AUR
+        uses: KSXGitHub/github-actions-deploy-aur@v4.1.1
+        with:
+          pkgname: ${{ env.AUR_PKGNAME }}
+          pkgbuild: packaging/aur/out/PKGBUILD
+          commit_username: ${{ secrets.AUR_USERNAME }}
+          commit_email: ${{ secrets.AUR_EMAIL }}
+          ssh_private_key: ${{ secrets.AUR_SSH_PRIVATE_KEY }}
+          commit_message: Update AUR package
+          ssh_keyscan_types: rsa,ecdsa,ed25519
