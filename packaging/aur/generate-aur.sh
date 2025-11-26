@@ -88,7 +88,7 @@ SHA256_LICENSE=$(download_license_hash)
 SHA256_X86_64=$(download_and_hash "amd64")
 SHA256_AARCH64=$(download_and_hash "arm64")
 
-MAINTAINER_LINE_ESCAPED=${MAINTAINER_LINE//\//\/}
+MAINTAINER_LINE_ESCAPED="${MAINTAINER_LINE//\//\\/}"
 
 sed \
   -e "s/@PKGNAME@/${PKGNAME}/g" \
