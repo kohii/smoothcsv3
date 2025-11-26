@@ -14,5 +14,3 @@ bash packaging/aur/generate-aur.sh 3.9.3 1 packaging/aur/out
 cd packaging/aur/out
 makepkg --printsrcinfo > .SRCINFO
 ```
-Env/args: required version, `PKGREL` (defaults to 1), `AUR_PKGNAME`, `AUR_USERNAME`, `AUR_EMAIL`.
-The script fails if the same `pkgver` exists with an equal or higher `pkgrel` already in AUR.
