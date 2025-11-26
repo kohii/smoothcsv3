@@ -18,13 +18,8 @@ sha256sums_aarch64=('@SHA256_AARCH64@')
 
 prepare() {
   # Strip the front matter (--- ... ---) from the terms markdown.
-  awk '
-    BEGIN { skip = 0; front = 1 }
-    front && /^---[[:space:]]*$/ { skip = 1; next }
-    front && skip && /^---[[:space:]]*$/ { skip = 0; front = 0; next }
-    skip { next }
-    { print }
-  ' "${srcdir}/LICENSE-SmoothCSV.md" > "${srcdir}/LICENSE-SmoothCSV.cleaned.md"
+  perl -0pe 's/\A\x{feff}?(?:[[:space:]]*\r?\n)*---\r?\n.*?\r?\n---\r?\n?//s' \
+    "${srcdir}/LICENSE-SmoothCSV.md" > "${srcdir}/LICENSE-SmoothCSV.cleaned.md"
 }
 
 package() {
