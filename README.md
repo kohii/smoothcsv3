@@ -89,6 +89,7 @@ Report bugs or request features via the [issue tracker](https://github.com/kohii
   - [ ] SmoothCSV in Browser
   - [ ] Develop an extension system
   - [ ] Diff viewer
+  - [ ] CSV Schema & validation
   - [ ] Open-source the project
   - [ ] Support additional file formats (like JSON, Avro, Parquet, etc.)
   - [ ] Integrate AI assistance
