@@ -45,7 +45,7 @@ Just smooth CSV editing that works.
 - **Excel Import/Export**: Open and save `.xlsx` files.
 - **Customizable File Formats**: Per-file delimiter, quotes, encoding, line endings.
 - **Themes**: Light or dark with system auto-detect.
-- **Localization**: English, Japanese, Spanish, Italian, Simplified Chinese.
+- **Localization**: English, Japanese, Spanish, Italian, Simplified Chinese, Portuguese, Russian, German, Korean.
 - **CLI**: Launch files and jump to any row/column.
 - **Deep Link**: Open files with `smoothcsv://` URLs.
 - **Auto-fill**: Drag-fill cells with intelligent pattern detection.
