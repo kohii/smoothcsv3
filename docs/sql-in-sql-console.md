@@ -18,10 +18,16 @@ The SQL Console supports SQLite's SQL syntax.
 
 ### Table References
 
-You can reference your CSV files in queries using the `@` prefix syntax with double quotes:
+You can reference CSV files in queries using several formats:
 
 ```sql
--- For files with a specific path
+-- Direct file path (simplest)
+SELECT * FROM "/path/to/file.csv";
+
+-- file:// URL format
+SELECT * FROM "file:///path/to/file.csv";
+
+-- @file: prefix syntax (legacy, still supported)
 SELECT * FROM "@file:/path/to/file.csv";
 
 -- For untitled/unsaved files
