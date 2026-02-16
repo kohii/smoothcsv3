@@ -25,20 +25,17 @@ jobs:
     env:
       AUR_PKGNAME: smoothcsv-bin
     steps:
-      - name: Install git
+      - name: Upgrade system and install dependencies
         run: |
           pacman -Sy --noconfirm archlinux-keyring
-          pacman -S --noconfirm --overwrite '*' git
+          pacman -Su --noconfirm
+          pacman -S --noconfirm --needed base-devel git curl nodejs npm sudo
 
       - name: Checkout
         uses: actions/checkout@v4
         with:
           fetch-depth: 0
           ref: ${{ github.event.repository.default_branch }}
-
-      - name: Install build tools
-        run: |
-          pacman -S --noconfirm --needed base-devel git curl nodejs npm sudo
 
       - name: Create build user
         run: |
