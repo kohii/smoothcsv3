@@ -28,7 +28,7 @@ jobs:
       - name: Install git
         run: |
           pacman -Sy --noconfirm archlinux-keyring
-          pacman -S --noconfirm git
+          pacman -S --noconfirm --overwrite '*' git
 
       - name: Checkout
         uses: actions/checkout@v4
