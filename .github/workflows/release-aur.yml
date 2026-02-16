@@ -26,7 +26,9 @@ jobs:
       AUR_PKGNAME: smoothcsv-bin
     steps:
       - name: Install git
-        run: pacman -Sy --noconfirm git
+        run: |
+          pacman -Sy --noconfirm archlinux-keyring
+          pacman -S --noconfirm git
 
       - name: Checkout
         uses: actions/checkout@v4
@@ -36,7 +38,7 @@ jobs:
 
       - name: Install build tools
         run: |
-          pacman -Sy --noconfirm --needed base-devel git curl nodejs npm sudo
+          pacman -S --noconfirm --needed base-devel git curl nodejs npm sudo
 
       - name: Create build user
         run: |
