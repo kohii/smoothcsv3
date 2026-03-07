@@ -53,6 +53,8 @@ Just smooth CSV editing that works.
 - **Auto-backup**: Automatically backup files before overwriting.
 - **File Format Presets & Rules**: Define custom file formats and rules for automatic application.
 - **Quick Filters & Sorting in Column Menu**: Quick access to column-specific actions.
+- **Keyboard Shortcuts Customization**: Fully customize keyboard shortcuts to match your workflow.
+- **Aggregation**: See summary statistics (Sum, Average, Min, Max, Count) for selected cells in the status bar, or add aggregate rows to the grid.
 - **Command Palette**: Quick access to all features.
 
 ## About This Repository
