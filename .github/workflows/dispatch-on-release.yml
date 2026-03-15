@@ -17,7 +17,7 @@ jobs:
     steps:
       - name: Dispatch workflow in smoothcsv-website
         env:
-          TARGET_REPO: smoothcsv/smoothcsv-website
+          TARGET_REPO: smoothcsv/smoothcsv
           TAG: ${{ github.event_name == 'workflow_dispatch' && github.event.inputs.tag || github.event.release.tag_name }}
           PAT: ${{ secrets.SMOOTHCSV_WEBSITE_DISPATCH_TOKEN }}
         run: |
