@@ -42,8 +42,10 @@ Just smooth CSV editing that works.
 - **Text Transforms**: Instant casing and naming conversions.
 - **Join & Split**: Merge or split cells horizontally/vertically
 - **Copy/Paste As**: Export selections as Markdown, HTML, JSON, SQL, LaTeX, etc.
+- **Copy as Raw Values**: Copy cell values without CSV quoting or escaping.
 - **Excel Import/Export**: Open and save `.xlsx` files.
-- **Customizable File Formats**: Per-file delimiter, quotes, encoding, line endings.
+- **Customizable File Formats**: Per-file delimiter, quotes, encoding, line endings. Flexible quote rules by header, body, and column.
+- **Quote Indicators**: See which cells will be quoted when saved.
 - **Themes**: Light or dark with system auto-detect.
 - **Localization**: English, Japanese, Spanish, Italian, Simplified Chinese, Portuguese, Russian, German, Korean.
 - **CLI**: Launch files and jump to any row/column.
@@ -56,6 +58,10 @@ Just smooth CSV editing that works.
 - **Keyboard Shortcuts Customization**: Fully customize keyboard shortcuts to match your workflow.
 - **Aggregation**: See summary statistics (Sum, Average, Min, Max, Count) for selected cells in the status bar, or add aggregate rows to the grid.
 - **Command Palette**: Quick access to all features.
+- **Read-Only Mode**: Prevent accidental edits to important files.
+- **Transpose**: Swap rows and columns instantly.
+- **Auto-Refresh**: Automatically reload files when modified externally.
+- **Open Hyperlinks**: Open URLs in cells directly in your browser.
 
 ## About This Repository
 
