@@ -6,8 +6,8 @@ on:
   workflow_dispatch:
     inputs:
       tag:
-        description: "Tag name (e.g. v3.9.3). Defaults to latest release tag when empty."
-        required: false
+        description: "Tag name (e.g. v3.9.3)"
+        required: true
       pkgrel:
         description: "Arch pkgrel (integer). Defaults to 1."
         required: false
@@ -47,10 +47,7 @@ jobs:
         run: |
           TAG="${{ github.event.inputs.tag || github.event.release.tag_name }}"
           if [[ -z "$TAG" ]]; then
-            TAG="$(git describe --tags --abbrev=0 2>/dev/null || true)"
-          fi
-          if [[ -z "$TAG" ]]; then
-            echo "No tag provided and no tags found in the repository." >&2
+            echo "No tag provided." >&2
             exit 1
           fi
           TAG="${TAG#v}"
