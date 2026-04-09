@@ -47,7 +47,10 @@ jobs:
         run: |
           TAG="${{ github.event.inputs.tag || github.event.release.tag_name }}"
           if [[ -z "$TAG" ]]; then
-            echo "No tag provided." >&2
+            TAG="$(git describe --tags --abbrev=0 2>/dev/null || true)"
+          fi
+          if [[ -z "$TAG" ]]; then
+            echo "No tag provided and no tags found in the repository." >&2
             exit 1
           fi
           TAG="${TAG#v}"
