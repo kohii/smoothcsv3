@@ -17,8 +17,14 @@ A clear and concise description of what the bug is.
 
 ## Expected Behavior
 
+
 ## Actual Behavior
 
+
 ## Environment
-- OS: 
-- SmoothCSV Version: 
+<!--
+Paste the output copied from the About dialog (`Copy` button).
+- macOS: SmoothCSV > About SmoothCSV
+- Windows/Linux: Help > About SmoothCSV
+-->
+[Paste here]
