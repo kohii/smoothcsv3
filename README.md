@@ -38,6 +38,7 @@ Just smooth CSV editing that works.
 - **Sorting**: Single or multi-column sorting by text, number, date, length.
 - **Multi-Cell Edit**: Edit multiple cells simultaneously, similar to multi-cursor editing.
 - **SQL Console**: Run SELECT queries on CSV files.
+- **CSV Compare**: Compare two CSV files and quickly spot differences.
 - **Header Tools**: Detect or set custom headers for structure.
 - **Text Transforms**: Instant casing and naming conversions.
 - **Join & Split**: Merge or split cells horizontally/vertically
