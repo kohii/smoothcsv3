@@ -54,12 +54,12 @@ Column names in queries can be specified in two ways:
    - Use default column names: `c1`, `c2`, etc.
    ```sql
    SELECT c1, c2 FROM "@file:/data.csv"
-   WHERE c1 > 1000;
+   WHERE c1 LIKE 'A%';
    ```
 
 ### Data Type Handling
 
-SQLite features dynamic typing, which means it can automatically convert between text and numeric values as needed. This makes it very convenient for working with CSV data, as you can use numeric operations directly on numeric-looking text values:
+All CSV values are stored as text. Arithmetic operators (`+`, `-`, `*`, `/`) implicitly convert numeric-looking text to numbers, but comparison operators (`>`, `<`, `>=`, `<=`) compare values as text. For reliable numeric comparisons, use `CAST`:
 
 ```sql
 -- Price column contains text values like "1000", "1500", etc.
@@ -67,6 +67,6 @@ SELECT
   Price * 1.1 AS price_with_tax,
   COUNT(*) AS count
 FROM "@file:/data.csv"
-WHERE Price > 1000
+WHERE CAST(Price AS REAL) > 1000
 GROUP BY Category;
 ```
