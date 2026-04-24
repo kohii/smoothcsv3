@@ -48,7 +48,7 @@ Just smooth CSV editing that works.
 - **Customizable File Formats**: Per-file delimiter, quotes, encoding, line endings. Flexible quote rules by header, body, and column.
 - **Quote Indicators**: See which cells will be quoted when saved.
 - **Themes**: Light or dark with system auto-detect.
-- **Localization**: English, Japanese, Spanish, Italian, Simplified Chinese, Portuguese, Russian, German, Korean.
+- **Localization**: English, Japanese, French, Spanish, Italian, Simplified Chinese, Portuguese, Russian, German, Korean.
 - **CLI**: Launch files and jump to any row/column.
 - **Deep Link**: Open files with `smoothcsv://` URLs.
 - **Auto-fill**: Drag-fill cells with intelligent pattern detection.
