@@ -14,10 +14,6 @@
   <a href="https://github.com/kohii/smoothcsv3/issues">Bug Reports or Feature Requests</a>
 </p>
 
-<p align="center">
-  <a href="https://www.buymeacoffee.com/kohii"><img src="https://www.buymeacoffee.com/assets/img/custom_images/orange_img.png" alt="Buy Me A Coffee" /></a>
-</p>
-
 ## Introduction
 
 SmoothCSV is a cross-platform CSV editor built for real work.
@@ -66,7 +62,6 @@ Just smooth CSV editing that works.
 
 ## About This Repository
 
-The source code is not yet public (I haven't decided whether it will be open-source or not).  
 This repository is used for issue tracking and release management.
 
 ## Download
@@ -74,40 +69,18 @@ This repository is used for issue tracking and release management.
 Download the latest version from the [releases](https://github.com/kohii/smoothcsv3/releases) page.  
 Report bugs or request features via the [issue tracker](https://github.com/kohii/smoothcsv3/issues).
 
-## Roadmap
+## Future Plans
 
-- [x] **Alpha Release**
-  - [x] Implement basic functionality (file read/write, editing, undo/redo, copy/paste, find/replace, command palette, etc.)
-- [x] **Beta Release**
-  - [x] Add Windows support
-  - [x] Rebrand the app
-  - [x] Add an updater
-  - [x] Pay $99 for Apple Developer Program
-  - [x] Localize for Japanese, Spanish, Chinese-Simplified
-- [x] **Stable Release**
-  - [x] Implement all features from the original SmoothCSV
-  - [x] Add a toolbar
-  - [x] Build a website
-  - [x] Implement settings
-  - [x] Launch on Product Hunt
-  - [x] Improve performance
-- [x] **Coming Soon**
-  - [x] Implement dark mode
-  - [x] Add Linux support
-- [ ] **Future Plans**
-  - [ ] SmoothCSV in Browser
-  - [ ] Develop an extension system
-  - [ ] Diff viewer
-  - [ ] CSV Schema & validation
-  - [ ] Open-source the project
-  - [ ] Support additional file formats (like JSON, Avro, Parquet, etc.)
-  - [ ] Integrate AI assistance
+- [x] Diff viewer
+- [ ] SmoothCSV in Browser
+- [ ] Develop an extension system
+- [ ] CSV Schema & validation
+- [ ] Support additional file formats (like JSON, Avro, Parquet, etc.)
+- [ ] Integrate AI assistance
 
 ## Support ❤️
 
-If you like this project and would like to support me:
-
-[![Buy Me A Coffee](https://www.buymeacoffee.com/assets/img/custom_images/orange_img.png)](https://www.buymeacoffee.com/kohii)
+If SmoothCSV helps your work, the best way to support continued development is to [buy a license](https://smoothcsv.com/pricing/).
 
 **Also, please:**
 - ⭐ Star this repository
