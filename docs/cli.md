@@ -45,6 +45,40 @@ smoothcsv --goto data.csv:1:1-10:5
 smoothcsv -g data.csv:10:3
 ```
 
+## Diff (Compare Two Files)
+
+Use `--diff` to open two files side-by-side in the compare editor.
+
+```bash
+smoothcsv --diff <file1> <file2>
+```
+
+### Rules
+
+- `--diff` requires **exactly two** positional paths. Zero, one, or three-or-more paths is an error (exit code 2).
+- stdin (`-`) is not supported with `--diff`.
+
+### Format Options
+
+CSV format options (`--delimiter`, `--quote`, `--quote-mode`, `--encoding`, `--header-rows`, `--header-columns`, `--header`, `--no-header`) apply to **both** files. To use different formats per side, use File Format Presets or allow SmoothCSV to automatically detect the format.
+
+```bash
+smoothcsv --diff old.tsv new.tsv -d tab --encoding utf8
+smoothcsv --diff old.csv new.csv --header
+```
+
+### Goto
+
+`--goto` targets one side of the diff. The `FILE` part must match one of the two positional paths.
+
+```bash
+# Focus row 10, column 3 on the right side
+smoothcsv --diff old.csv new.csv --goto new.csv:10:3
+
+# Focus row 5 on the left side
+smoothcsv --diff old.csv new.csv -g old.csv:5
+```
+
 ## CSV Format Options
 
 Note: SmoothCSV will automatically detect the CSV format from the file contents. You can use the following options to override the detection.
