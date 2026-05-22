@@ -3,6 +3,10 @@
 ## Overview
 The `smoothcsv` command provides a powerful way to open and manipulate CSV files from the terminal, similar to VSCode's `code` command but optimized for CSV editing workflows.
 
+## Installation
+
+Open the Command Palette and run **"Install 'smoothcsv' command in PATH"**.
+
 ## Basic Syntax
 ```bash
 smoothcsv [options] [path ...]
