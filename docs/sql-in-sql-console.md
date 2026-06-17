@@ -21,7 +21,10 @@ The SQL Console supports SQLite's SQL syntax.
 You can reference CSV files in queries using several formats:
 
 ```sql
--- Direct file path (simplest)
+-- Filename without extension (matches an open file by its base name)
+SELECT * FROM customers;
+
+-- Direct file path (simplest for files on disk)
 SELECT * FROM "/path/to/file.csv";
 
 -- file:// URL format
@@ -37,6 +40,13 @@ SELECT * FROM "@untitled:Untitled-1";
 The system attempts to locate files in the following order:
 1. Currently opened files in the editor
 2. Files in the specified filesystem path
+
+#### Filename References
+
+You can reference an open file by its filename without the extension. The lookup is case-insensitive and only matches currently opened documents.
+
+- If no open file matches, the name is passed through to SQLite as-is, so it still works for temp tables, attached databases, or other SQLite-native names.
+- If more than one open file shares the same base name, the console returns an ambiguity error so you can fall back to a full `@file:` or path reference.
 
 ### Column References
 
