@@ -45,8 +45,7 @@ The system attempts to locate files in the following order:
 
 You can reference an open file by its filename without the extension. The lookup is case-insensitive and only matches currently opened documents.
 
-- If no open file matches, the name is passed through to SQLite as-is, so it still works for temp tables, attached databases, or other SQLite-native names.
-- If more than one open file shares the same base name, the console returns an ambiguity error so you can fall back to a full `@file:` or path reference.
+If more than one open file shares the same base name, the console returns an ambiguity error so you can fall back to a full `@file:` or path reference.
 
 ### Column References
 
