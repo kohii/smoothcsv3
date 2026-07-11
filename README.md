@@ -44,11 +44,12 @@ Just smooth CSV editing that works.
 - **Customizable File Formats**: Per-file delimiter, quotes, encoding, line endings. Flexible quote rules by header, body, and column.
 - **Quote Indicators**: See which cells will be quoted when saved.
 - **Themes**: Light or dark with system auto-detect.
-- **Localization**: English, Japanese, French, Spanish, Italian, Simplified Chinese, Portuguese, Russian, German, Korean.
+- **Localization**: English, Japanese, French, Spanish, Italian, Simplified Chinese, Portuguese, Russian, German, Korean, Turkish.
 - **CLI**: Launch files and jump to any row/column.
 - **Deep Link**: Open files with `smoothcsv://` URLs.
 - **Auto-fill**: Drag-fill cells with intelligent pattern detection.
-- **Cell Value Panel**: Docked editor akin to Excel’s formula bar.
+- **Cell Value View**: Docked editor akin to Excel’s formula bar.
+- **Record View**: Show a single row as a vertical list of fields, making wide tables easier to read and edit.
 - **Auto-backup**: Automatically backup files before overwriting.
 - **File Format Presets & Rules**: Define custom file formats and rules for automatic application.
 - **Quick Filters & Sorting in Column Menu**: Quick access to column-specific actions.
