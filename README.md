@@ -42,7 +42,7 @@ Just smooth CSV editing that works.
 - **Copy/Paste As**: Export selections as Markdown, HTML, JSON, SQL, LaTeX, etc.
 - **Copy as Raw Values**: Copy cell values without CSV quoting or escaping.
 - **Excel Import/Export**: Open and save `.xlsx` files.
-- **PDF Export**: Export the grid as a print-ready PDF, sized to the page with the header row repeated.
+- **PDF Export**: Export the grid as a print-ready PDF.
 - **Customizable File Formats**: Per-file delimiter, quotes, encoding, line endings. Flexible quote rules by header, body, and column.
 - **Quote Indicators**: See which cells will be quoted when saved.
 - **Themes**: Light or dark with system auto-detect.
