@@ -29,6 +29,7 @@ Just smooth CSV editing that works.
 
 - **Power Grid Editor**: Intuitive and performant editing with spreadsheet-like UI.
 - **Row/Column Tools**: Insert, delete, move, hide, dedupe.
+- **Fill Down & Blank Down**: Fill gaps from the value above, or collapse repeated values down to their first occurrence.
 - **Find & Replace**: Search and replace with regex support.
 - **Filtering**: SQL-style filters or a visual condition builder.
 - **Sorting**: Single or multi-column sorting by text, number, date, length.
@@ -41,15 +42,19 @@ Just smooth CSV editing that works.
 - **Copy/Paste As**: Export selections as Markdown, HTML, JSON, SQL, LaTeX, etc.
 - **Copy as Raw Values**: Copy cell values without CSV quoting or escaping.
 - **Excel Import/Export**: Open and save `.xlsx` files.
+- **PDF Export**: Export the grid as a print-ready PDF, sized to the page with the header row repeated.
 - **Customizable File Formats**: Per-file delimiter, quotes, encoding, line endings. Flexible quote rules by header, body, and column.
 - **Quote Indicators**: See which cells will be quoted when saved.
 - **Themes**: Light or dark with system auto-detect.
+- **Native Title Bar**: Use the operating system's title bar instead of the custom one.
 - **Localization**: English, Japanese, French, Spanish, Italian, Simplified Chinese, Portuguese, Russian, German, Korean, Turkish.
 - **CLI**: Launch files and jump to any row/column.
 - **Deep Link**: Open files with `smoothcsv://` URLs.
 - **Auto-fill**: Drag-fill cells with intelligent pattern detection.
+- **Drag to Move or Copy**: Drag the border of a selection to move its values, or hold a modifier to copy them.
 - **Cell Value View**: Docked editor akin to Excel’s formula bar.
 - **Record View**: Show a single row as a vertical list of fields, making wide tables easier to read and edit.
+- **Word Wrap**: Wrap long cell values onto multiple lines instead of clipping them, per tab.
 - **Auto-backup**: Automatically backup files before overwriting.
 - **File Format Presets & Rules**: Define custom file formats and rules for automatic application.
 - **Quick Filters & Sorting in Column Menu**: Quick access to column-specific actions.
