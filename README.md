@@ -29,7 +29,7 @@ Just smooth CSV editing that works.
 
 - **Power Grid Editor**: Intuitive and performant editing with spreadsheet-like UI.
 - **Row/Column Tools**: Insert, delete, move, hide, dedupe.
-- **Fill Down & Blank Down**: Fill gaps from the value above, or collapse repeated values down to their first occurrence.
+- **Fill Blanks Down & Blank Down**: Fill gaps from the value above, or collapse repeated values down to their first occurrence.
 - **Find & Replace**: Search and replace with regex support.
 - **Filtering**: SQL-style filters or a visual condition builder.
 - **Sorting**: Single or multi-column sorting by text, number, date, length.
@@ -40,11 +40,13 @@ Just smooth CSV editing that works.
 - **Text Transforms**: Instant casing and naming conversions.
 - **Join & Split**: Merge or split cells horizontally/vertically
 - **Copy/Paste As**: Export selections as Markdown, HTML, JSON, SQL, LaTeX, etc.
+- **Copy with Options**: Tune delimiter, quoting, column names, alignment, indentation, or table name with a live preview, and save the setup as a named preset.
 - **Copy as Raw Values**: Copy cell values without CSV quoting or escaping.
 - **Excel Import/Export**: Open and save `.xlsx` files.
 - **PDF Export**: Export the grid as a print-ready PDF.
 - **Customizable File Formats**: Per-file delimiter, quotes, encoding, line endings. Flexible quote rules by header, body, and column.
 - **Quote Indicators**: See which cells will be quoted when saved.
+- **Render Whitespace**: Mark spaces with a dot so trailing padding, doubled spaces, and full-width spaces are visible.
 - **Themes**: Light or dark with system auto-detect.
 - **Native Title Bar**: Use the operating system's title bar instead of the custom one.
 - **Localization**: English, Japanese, French, Spanish, Italian, Simplified Chinese, Portuguese, Russian, German, Korean, Turkish.
