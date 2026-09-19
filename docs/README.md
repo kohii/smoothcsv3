@@ -4,3 +4,4 @@
 - [SmoothCSV URLs](./smoothcsv-url.md) - Opening files with custom URL syntax
 - [SQL Console](./sql-in-sql-console.md) - Using the SQL console for data analysis
 - [SQL Row Filter](./sql-in-row-filter.md) - Filtering rows using SQL WHERE clause syntax
+- [Troubleshooting](./troubleshooting.md) - Known issues and workarounds
