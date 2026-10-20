@@ -60,6 +60,8 @@ CAST('123' AS bigint) -- returns 123
 CAST('12.3' AS double precision) -- returns 12.3
 CAST('abc' AS bigint) -- error
 TRY_CAST('abc' AS bigint) -- returns null
+CAST('yes' AS boolean) -- returns true (also true/false, t/f, y/n, on/off, 1/0)
+CAST('abc' AS boolean) -- error
 CAST('2024-03-14' AS date) -- returns date
 CAST('15:30:00' AS time) -- returns time
 CAST('2024-03-14 15:30:00' AS timestamp) -- returns timestamp

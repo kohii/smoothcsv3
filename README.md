@@ -37,7 +37,7 @@ Just smooth CSV editing that works.
 - **SQL Console**: Run SELECT queries on CSV files.
 - **CSV Compare**: Compare two CSV files and quickly spot differences.
 - **Header Tools**: Detect or set custom headers for structure.
-- **Text Transforms**: Instant casing and naming conversions.
+- **Text Transforms**: Instant casing, naming, and full-width/half-width conversions, plus whitespace trimming.
 - **Join & Split**: Merge or split cells horizontally/vertically
 - **Copy/Paste As**: Export selections as Markdown, HTML, JSON, SQL, LaTeX, etc.
 - **Copy with Options**: Tune delimiter, quoting, column names, alignment, indentation, or table name with a live preview, and save the setup as a named preset.
@@ -58,6 +58,7 @@ Just smooth CSV editing that works.
 - **Record View**: Show a single row as a vertical list of fields, making wide tables easier to read and edit.
 - **Word Wrap**: Wrap long cell values onto multiple lines instead of clipping them, per tab.
 - **Auto-backup**: Automatically backup files before overwriting.
+- **Hot Exit**: Quit without save prompts, and get your windows, tabs, and unsaved changes back on the next start.
 - **File Format Presets & Rules**: Define custom file formats and rules for automatic application.
 - **Quick Filters & Sorting in Column Menu**: Quick access to column-specific actions.
 - **Keyboard Shortcuts Customization**: Fully customize keyboard shortcuts to match your workflow.
