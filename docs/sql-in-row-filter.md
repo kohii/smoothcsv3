@@ -114,6 +114,7 @@ CAST('2024-03-14 15:30:00' AS timestamp) -- returns timestamp
 | `SUBSTRING(str, start[, length])` | Extract substring | `SUBSTRING(name, 1, 3) = 'Joe'` |
 | `CONCAT(str1, str2, ...)` | Join strings | `CONCAT(firstName, ' ', lastName)` |
 | `REPLACE(str, from, to)` | Replace text | `REPLACE(email, '@old.com', '@new.com')` |
+| `UNACCENT(str)` | Remove accents | `UNACCENT(name) ILIKE '%celine%'` |
 
 ### Numeric Functions
 
