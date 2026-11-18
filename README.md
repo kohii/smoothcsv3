@@ -10,7 +10,7 @@
 
 <p align="center">
   <a href="https://smoothcsv.com">Website</a> •
-  <a href="https://github.com/kohii/smoothcsv3/tree/main/docs">Documentation</a> •
+  <a href="https://smoothcsv.com/docs">Documentation</a> •
   <a href="https://github.com/kohii/smoothcsv3/issues">Bug Reports or Feature Requests</a>
 </p>
 
